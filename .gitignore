@@ -1,0 +1,7 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/src/wpf.prism/.vs
+/src/wpf.prism/wpf.prism/bin/Debug/net8.0-windows
+/src/wpf.prism/wpf.prism/obj
