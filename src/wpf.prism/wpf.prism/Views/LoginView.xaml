@@ -11,6 +11,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/wpf.controls;component/Resource/Style/TextBoxStyle.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/wpf.controls;component/Resource/Style/ButtonStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
@@ -37,8 +38,10 @@
             <PasswordBox Width="250" Height="28"  Grid.Row="1" Grid.Column="1" TextBlock.LineHeight="28" controls:CustomPasswordBox.BindPassword="True" controls:CustomPasswordBox.BoundPassword="{Binding Password,Mode=TwoWay}"></PasswordBox>
 
             <WrapPanel Grid.Row="2" VerticalAlignment="Center" Grid.ColumnSpan="2" Width="180">
-                <Button Height="28" Width="80" Margin="5,0" Command="{Binding LoginCommand}">登录</Button>
-                <Button Height="28" Width="80" Margin="5,0" Command="{Binding ResetCommand}">重置</Button>
+                <Button Height="28" Width="80" Margin="5,0" Command="{Binding LoginCommand}" Style="{DynamicResource CornerRadiusButton}"
+                        Background="Blue" Foreground="White">登录</Button>
+                <Button Height="28" Width="80" Margin="5,0" Command="{Binding ResetCommand}" Style="{DynamicResource CornerRadiusButton}"
+                        Background="Blue" Foreground="White">重置</Button>
             </WrapPanel>
         </Grid>
     </Grid>
