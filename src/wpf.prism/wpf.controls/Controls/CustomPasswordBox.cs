@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows;
 
-namespace wpf.prism.Common.Helper
+namespace wpf.controls.Controls
 {
-    public class PasswordBoxHelper
+    public class CustomPasswordBox
     {
         public static readonly DependencyProperty BoundPasswordProperty =
-            DependencyProperty.RegisterAttached("BoundPassword", typeof(string), typeof(PasswordBoxHelper),
+            DependencyProperty.RegisterAttached("BoundPassword", typeof(string), typeof(CustomPasswordBox),
                 new PropertyMetadata(string.Empty, OnBoundPasswordChanged));
 
         public static readonly DependencyProperty BindPasswordProperty =
-            DependencyProperty.RegisterAttached("BindPassword", typeof(bool), typeof(PasswordBoxHelper),
+            DependencyProperty.RegisterAttached("BindPassword", typeof(bool), typeof(CustomPasswordBox),
                 new PropertyMetadata(false, OnBindPasswordChanged));
 
         private static readonly DependencyProperty UpdatingPasswordProperty =
-            DependencyProperty.RegisterAttached("UpdatingPassword", typeof(bool), typeof(PasswordBoxHelper),
+            DependencyProperty.RegisterAttached("UpdatingPassword", typeof(bool), typeof(CustomPasswordBox),
                 new PropertyMetadata(false));
 
         public static string GetBoundPassword(DependencyObject dp)
