@@ -8,3 +8,8 @@
 /src/wpf.prism/wpf.controls/bin/Debug/net8.0-windows
 /src/wpf.prism/wpf.controls/obj
 /src/wpf.prism/wpf.moduleA/obj
+/src/wpf.prism/Wpf.Infrastructure/bin/Debug/net8.0-windows
+/src/wpf.prism/Wpf.Infrastructure/obj
+/src/wpf.prism/Wpf.Models/bin/Debug/net8.0-windows
+/src/wpf.prism/Wpf.Models/obj
+/src/wpf.prism/wpf.moduleA/bin/Debug/net6.0-windows
