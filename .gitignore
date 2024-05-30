@@ -5,3 +5,5 @@
 /src/wpf.prism/.vs
 /src/wpf.prism/wpf.prism/bin/Debug/net8.0-windows
 /src/wpf.prism/wpf.prism/obj
+/src/wpf.prism/wpf.controls/bin/Debug/net8.0-windows
+/src/wpf.prism/wpf.controls/obj
