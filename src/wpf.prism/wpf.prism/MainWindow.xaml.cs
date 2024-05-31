@@ -17,10 +17,10 @@ namespace wpf.prism
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(MainViewModel mainViewModel)
         {
             InitializeComponent();
-            this.DataContext = new MainViewModel();
+            this.DataContext = mainViewModel;
         }
     }
 }

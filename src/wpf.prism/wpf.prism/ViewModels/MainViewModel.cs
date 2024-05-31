@@ -10,9 +10,9 @@ namespace wpf.prism.ViewModels
 {
     public class MainViewModel : ObservableObject
     {
-        public MainViewModel()
+        public MainViewModel(LoginView loginView)
         {
-            Body = new LoginView();
+            Body = loginView;
         }
         private object body;
 

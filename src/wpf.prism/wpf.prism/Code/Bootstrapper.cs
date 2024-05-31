@@ -1,24 +1,22 @@
-﻿using Prism.Ioc;
+﻿using Prism.DryIoc;
+using Prism.Ioc;
 using Prism.Modularity;
-using System.Configuration;
-using System.Data;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
-using wpf.prism.Code;
-using Wpf.Infrastructure.Repositories;
 using wpf.prism.ViewModels;
 using wpf.prism.Views;
+using Wpf.Infrastructure.Repositories;
 using Wpf.Services;
-using DryIoc;
-using Prism.DryIoc;
 
-namespace wpf.prism
+namespace wpf.prism.Code
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
-    public partial class App : PrismApplication
+    public class Bootstrapper : PrismBootstrapper
     {
-        protected override Window CreateShell()
+        protected override DependencyObject CreateShell()
         {
             return Container.Resolve<MainWindow>();
         }
@@ -27,7 +25,7 @@ namespace wpf.prism
         {
             //注册服务和视图
             containerRegistry.Register<MainViewModel>();
-            containerRegistry.RegisterForNavigation<MainWindow, MainViewModel>();
+            containerRegistry.Register<MainWindow>();
             containerRegistry.Register<LoginViewModel>();
             containerRegistry.Register<LoginView>();
             containerRegistry.Register<UserRepository>();
@@ -40,6 +38,6 @@ namespace wpf.prism
             //配置模块
             moduleCatalog.AddModule<wpf.moduleA.moduleAModule>();
         }
-    }
 
+    }
 }

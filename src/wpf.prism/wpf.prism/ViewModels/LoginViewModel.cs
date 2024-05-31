@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Wpf.Services;
 
 namespace wpf.prism.ViewModels
 {
@@ -12,7 +13,8 @@ namespace wpf.prism.ViewModels
     {
         public RelayCommand LoginCommand { get; set; }
         public RelayCommand ResetCommand { get; set; }
-        public LoginViewModel()
+        private IUserService _userService;
+        public LoginViewModel(IUserService userService)
         {
             LoginCommand = new RelayCommand(Login);
             ResetCommand = new RelayCommand(() =>
@@ -20,11 +22,13 @@ namespace wpf.prism.ViewModels
                 UserName = string.Empty;
                 Password = string.Empty;
             });
+            _userService = userService;
         }
 
         private void Login()
         {
             Password = "123456";
+            _userService.AddUser(new Wpf.Models.User { UserName = UserName, Password = Password });
         }
 
         private string _userName;
