@@ -3,7 +3,6 @@ using Prism.Modularity;
 using System.Configuration;
 using System.Data;
 using System.Windows;
-using wpf.prism.Code;
 using Wpf.Infrastructure.Repositories;
 using wpf.prism.ViewModels;
 using wpf.prism.Views;
@@ -20,23 +19,18 @@ namespace wpf.prism
     {
         protected override Window CreateShell()
         {
-            return Container.Resolve<MainWindow>();
+            return Container.Resolve<MainView>();
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             //注册服务和视图
-            containerRegistry.Register<MainViewModel>();
-            containerRegistry.RegisterForNavigation<MainWindow, MainViewModel>();
-            containerRegistry.Register<LoginViewModel>();
-            containerRegistry.Register<LoginView>();
-            containerRegistry.Register<UserRepository>();
-            containerRegistry.Register<UserService>();
+            //containerRegistry.Register<LoginViewModel>();
+            //containerRegistry.RegisterForNavigation<LoginView>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
-            //base.ConfigureModuleCatalog(moduleCatalog);
             //配置模块
             moduleCatalog.AddModule<wpf.moduleA.moduleAModule>();
         }

@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using Prism.Ioc;
+using Prism.Regions;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -9,18 +11,18 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using wpf.prism.ViewModels;
+using wpf.prism.Views;
 
-namespace wpf.prism
+namespace wpf.prism.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainView : Window
     {
-        public MainWindow(MainViewModel mainViewModel)
+        public MainView()
         {
             InitializeComponent();
-            this.DataContext = mainViewModel;
         }
     }
 }

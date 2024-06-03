@@ -18,14 +18,14 @@ namespace wpf.prism.Code
     {
         protected override DependencyObject CreateShell()
         {
-            return Container.Resolve<MainWindow>();
+            return Container.Resolve<MainView>();
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             //注册服务和视图
             containerRegistry.Register<MainViewModel>();
-            containerRegistry.Register<MainWindow>();
+            containerRegistry.Register<MainView>();
             containerRegistry.Register<LoginViewModel>();
             containerRegistry.Register<LoginView>();
             containerRegistry.Register<UserRepository>();

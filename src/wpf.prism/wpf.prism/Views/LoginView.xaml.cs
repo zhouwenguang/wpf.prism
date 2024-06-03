@@ -21,11 +21,11 @@ namespace wpf.prism.Views
     /// </summary>
     public partial class LoginView : UserControl
     {
-        public LoginView(LoginViewModel viewModel)
+        public LoginView()
         {
             InitializeComponent();
 
-            this.DataContext = viewModel;
         }
+
     }
 }

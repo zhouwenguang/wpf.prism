@@ -1,20 +1,24 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Prism.Regions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Wpf.Prism.Core.Mvvm;
 using Wpf.Services;
 
 namespace wpf.prism.ViewModels
 {
-    public class LoginViewModel : ObservableObject
+    public class LoginViewModel : RegionViewModelBase
     {
         public RelayCommand LoginCommand { get; set; }
         public RelayCommand ResetCommand { get; set; }
+
+        private readonly IRegionManager _regionManager;
         private IUserService _userService;
-        public LoginViewModel(IUserService userService)
+        public LoginViewModel(IRegionManager regionManager, IUserService userService) : base(regionManager)
         {
             LoginCommand = new RelayCommand(Login);
             ResetCommand = new RelayCommand(() =>
@@ -22,7 +26,13 @@ namespace wpf.prism.ViewModels
                 UserName = string.Empty;
                 Password = string.Empty;
             });
+            this._regionManager = regionManager;
             _userService = userService;
+        }
+
+        public override void OnNavigatedTo(NavigationContext navigationContext)
+        {
+            //do something
         }
 
         private void Login()

@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf.Infrastructure", "Wpf.I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf.Models", "Wpf.Models\Wpf.Models.csproj", "{36325FFB-1359-49DF-ABDF-257FBBB213EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf.Services", "Wpf.Services\Wpf.Services.csproj", "{3F8DA217-8EE7-4CF3-A687-7089C0F1946F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf.Services", "Wpf.Services\Wpf.Services.csproj", "{3F8DA217-8EE7-4CF3-A687-7089C0F1946F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf.Prism.Core", "Wpf.Prism.Core\Wpf.Prism.Core.csproj", "{22783BC6-70CB-46D1-8539-663432D5192E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{3F8DA217-8EE7-4CF3-A687-7089C0F1946F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F8DA217-8EE7-4CF3-A687-7089C0F1946F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F8DA217-8EE7-4CF3-A687-7089C0F1946F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22783BC6-70CB-46D1-8539-663432D5192E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22783BC6-70CB-46D1-8539-663432D5192E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22783BC6-70CB-46D1-8539-663432D5192E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22783BC6-70CB-46D1-8539-663432D5192E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

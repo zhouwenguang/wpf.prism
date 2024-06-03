@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Code\Bootstrapper.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
     <PackageReference Include="Prism.Core" Version="8.1.97" />
     <PackageReference Include="Prism.DryIoc" Version="8.1.97" />
@@ -19,10 +23,12 @@
     <ProjectReference Include="..\wpf.controls\wpf.controls.csproj" />
     <ProjectReference Include="..\Wpf.Infrastructure\Wpf.Infrastructure.csproj" />
     <ProjectReference Include="..\wpf.moduleA\wpf.moduleA.csproj" />
+    <ProjectReference Include="..\Wpf.Prism.Core\Wpf.Prism.Core.csproj" />
     <ProjectReference Include="..\Wpf.Services\Wpf.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Code\" />
     <Folder Include="Common\" />
   </ItemGroup>
 

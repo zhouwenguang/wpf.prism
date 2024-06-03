@@ -8,6 +8,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Wpf.Infrastructure\Wpf.Infrastructure.csproj" />
+    <ProjectReference Include="..\Wpf.Prism.Core\Wpf.Prism.Core.csproj" />
     <ProjectReference Include="..\Wpf.Services\Wpf.Services.csproj" />
   </ItemGroup>
 </Project>
