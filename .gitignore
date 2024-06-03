@@ -16,3 +16,5 @@
 /src/wpf.prism/wpf.moduleA/bin/Debug/net8.0-windows7.0
 /src/wpf.prism/Wpf.Services/bin/Debug/net8.0-windows
 /src/wpf.prism/Wpf.Services/obj
+/src/wpf.prism/Wpf.Prism.Core/bin/Debug/net8.0-windows
+/src/wpf.prism/Wpf.Prism.Core/obj
