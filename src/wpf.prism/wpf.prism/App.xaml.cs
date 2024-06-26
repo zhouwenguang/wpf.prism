@@ -25,8 +25,8 @@ namespace wpf.prism
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             //注册服务和视图
-            //containerRegistry.Register<LoginViewModel>();
-            //containerRegistry.RegisterForNavigation<LoginView>();
+            containerRegistry.Register<LoginViewModel>();
+            containerRegistry.RegisterForNavigation<LoginView>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)

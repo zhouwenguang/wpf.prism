@@ -20,13 +20,14 @@ namespace wpf.moduleA
         public void OnInitialized(IContainerProvider containerProvider)
         {
             //在初始化进行试图导航等操作
-            _regionManager.RequestNavigate(RegionNames.ContentRegion, "ViewA");
+            _regionManager.RequestNavigate(RegionNames.ContentRegion, "DataGridSelectAll");
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             //注册服务和视图
             containerRegistry.RegisterForNavigation<ViewA>();
+            containerRegistry.RegisterForNavigation<DataGridSelectAll>();
             containerRegistry.Register<IUserRepository, UserRepository>();
             containerRegistry.Register<IUserService, UserService>();
         }

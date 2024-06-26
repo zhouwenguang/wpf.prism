@@ -22,10 +22,10 @@ namespace wpf.prism.ViewModels
             ////IRegion region = regionManager.Regions[RegionNames.ContentRegion];
             ////region.Add(view);
             //regionManager.RequestNavigate(RegionNames.ContentRegion, "LoginView");
-            ////ClickCommand = new RelayCommand(() =>
-            ////{
-            ////    regionManager.RequestNavigate(RegionNames.ContentRegion, "LoginView");
-            ////});
+            ClickCommand = new RelayCommand(() =>
+            {
+                regionManager.RequestNavigate(RegionNames.ContentRegion, "LoginView");
+            });
 
         }
 
