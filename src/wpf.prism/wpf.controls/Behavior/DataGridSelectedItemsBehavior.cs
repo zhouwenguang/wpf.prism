@@ -32,6 +32,7 @@ namespace wpf.controls.Behavior
         {
             if (d is DataGrid dataGrid)
             {
+                //dataGrid.Loaded += (s, e) => SelectItems(dataGrid);
                 dataGrid.SelectionChanged -= DataGrid_SelectionChanged;
                 if (e.NewValue != null)
                 {
@@ -53,6 +54,18 @@ namespace wpf.controls.Behavior
             {
                 if(item is object)
                     selectedItems.Add(item);
+            }
+        }
+
+        private static void SelectItems(DataGrid dataGrid)
+        {
+            IList selectedItems = GetSelectedItems(dataGrid);
+            if (selectedItems == null) return;
+
+            dataGrid.SelectedItems.Clear();
+            foreach (var item in selectedItems)
+            {
+                dataGrid.SelectedItems.Add(item);
             }
         }
     }
