@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Microsoft.Extensions.Logging;
 using Prism.Regions;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,8 @@ namespace wpf.prism.ViewModels
 
         private readonly IRegionManager _regionManager;
         private IUserService _userService;
-        public LoginViewModel(IRegionManager regionManager, IUserService userService) : base(regionManager)
+        private ILogger<LoginViewModel> _logger;
+        public LoginViewModel(IRegionManager regionManager, IUserService userService, ILogger<LoginViewModel> logger) : base(regionManager)
         {
             LoginCommand = new RelayCommand(Login);
             ResetCommand = new RelayCommand(() =>
@@ -28,11 +30,25 @@ namespace wpf.prism.ViewModels
             });
             this._regionManager = regionManager;
             _userService = userService;
+            _logger = logger;
+
+            _logger.LogInformation("进入LoginViewModel");
         }
 
         public override void OnNavigatedTo(NavigationContext navigationContext)
         {
+            try
+            {
+                int a = 3;
+                int b = 0;
+                var r = a / b;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "自己制造异常");
+            }
             //do something
+            _logger.LogInformation("OnNavigatedTo");
         }
 
         private void Login()
