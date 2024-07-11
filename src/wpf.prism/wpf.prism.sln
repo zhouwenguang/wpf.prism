@@ -5,15 +5,21 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wpf.prism", "wpf.prism\wpf.prism.csproj", "{8EA403CB-8B30-443C-8B7C-44EB0A9B2536}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpf.controls", "wpf.controls\wpf.controls.csproj", "{8E2353EE-9147-440B-9FF1-8F8BC7A2803A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wpf.controls", "wpf.controls\wpf.controls.csproj", "{8E2353EE-9147-440B-9FF1-8F8BC7A2803A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{FFA445E5-DCDD-4A06-A057-FD4B82B380AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpf.moduleA", "wpf.moduleA\wpf.moduleA.csproj", "{FC4D5845-64CD-4F62-AF02-DE2490654478}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wpf.moduleA", "wpf.moduleA\wpf.moduleA.csproj", "{FC4D5845-64CD-4F62-AF02-DE2490654478}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf.Infrastructure", "Wpf.Infrastructure\Wpf.Infrastructure.csproj", "{2947A162-C234-4B3D-8D5B-C197CDD89B02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf.Infrastructure", "Wpf.Infrastructure\Wpf.Infrastructure.csproj", "{2947A162-C234-4B3D-8D5B-C197CDD89B02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf.Models", "Wpf.Models\Wpf.Models.csproj", "{36325FFB-1359-49DF-ABDF-257FBBB213EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf.Models", "Wpf.Models\Wpf.Models.csproj", "{36325FFB-1359-49DF-ABDF-257FBBB213EA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf.Services", "Wpf.Services\Wpf.Services.csproj", "{3F8DA217-8EE7-4CF3-A687-7089C0F1946F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf.Prism.Core", "Wpf.Prism.Core\Wpf.Prism.Core.csproj", "{22783BC6-70CB-46D1-8539-663432D5192E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf.Common", "Wpf.Common\Wpf.Common.csproj", "{BE140D79-7E50-4EF0-A5C4-BC9AED9FC065}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +47,18 @@ Global
 		{36325FFB-1359-49DF-ABDF-257FBBB213EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36325FFB-1359-49DF-ABDF-257FBBB213EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36325FFB-1359-49DF-ABDF-257FBBB213EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F8DA217-8EE7-4CF3-A687-7089C0F1946F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F8DA217-8EE7-4CF3-A687-7089C0F1946F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F8DA217-8EE7-4CF3-A687-7089C0F1946F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F8DA217-8EE7-4CF3-A687-7089C0F1946F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22783BC6-70CB-46D1-8539-663432D5192E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22783BC6-70CB-46D1-8539-663432D5192E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22783BC6-70CB-46D1-8539-663432D5192E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22783BC6-70CB-46D1-8539-663432D5192E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE140D79-7E50-4EF0-A5C4-BC9AED9FC065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE140D79-7E50-4EF0-A5C4-BC9AED9FC065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE140D79-7E50-4EF0-A5C4-BC9AED9FC065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE140D79-7E50-4EF0-A5C4-BC9AED9FC065}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

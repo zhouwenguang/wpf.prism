@@ -9,6 +9,7 @@ namespace Wpf.Infrastructure.Repositories
 {
     public interface IUserRepository
     {
+        Task<bool> AddUser(User model);
         Task<User> GetUserByUserName(string userName);
     }
 }

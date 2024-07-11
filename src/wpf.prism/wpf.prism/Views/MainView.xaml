@@ -1,0 +1,51 @@
+﻿<Window x:Class="wpf.prism.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf.prism"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        xmlns:core="clr-namespace:Wpf.Prism.Core;assembly=Wpf.Prism.Core"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="{Binding Title}" Height="450" Width="800" WindowState="Normal" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style x:Key="HoverButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#619CF5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="5" BorderThickness="{TemplateBinding BorderThickness}" Cursor="Hand" Background="{TemplateBinding Background}" >
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" TextOptions.TextHintingMode="Animated"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Red"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="BorderBrush" Value="Red"/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="Green"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="BorderBrush" Value="Green"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <!--<Button Content="点击" Command="{Binding ClickCommand}" Style="{StaticResource HoverButtonStyle}" Width="100" Height="30" Margin="0,10" IsCancel="True"></Button>-->
+
+            <Button Content="点击一下" Margin="5" Width="146" Height="40" Background="#619CF5" FontSize="16" Foreground="#fff" BorderThickness="0"  Cursor="Hand" 
+                        CommandParameter="true" IsDefault="True" FontFamily="SimHei"  Style="{StaticResource HoverButtonStyle}" Command="{Binding ClickCommand}"/>
+        </StackPanel>
+        <ContentControl Name="ContentRegion" Grid.Row="1" prism:RegionManager.RegionName="{x:Static core:RegionNames.ContentRegion}"></ContentControl>
+    </Grid>
+</Window>

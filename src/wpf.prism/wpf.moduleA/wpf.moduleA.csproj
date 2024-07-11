@@ -1,9 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\wpf.controls\wpf.controls.csproj" />
+    <ProjectReference Include="..\Wpf.Infrastructure\Wpf.Infrastructure.csproj" />
+    <ProjectReference Include="..\Wpf.Prism.Core\Wpf.Prism.Core.csproj" />
+    <ProjectReference Include="..\Wpf.Services\Wpf.Services.csproj" />
   </ItemGroup>
 </Project>
