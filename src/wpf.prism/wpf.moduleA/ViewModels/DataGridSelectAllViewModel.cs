@@ -1,4 +1,5 @@
 ﻿using Prism.Commands;
+using Prism.Events;
 using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using wpf.moduleA.Events;
 
 namespace wpf.moduleA.ViewModels
 {
@@ -16,6 +18,8 @@ namespace wpf.moduleA.ViewModels
         private ObservableCollection<Person> _people;
         private ObservableCollection<Person> _selectedPeople;
         private ICommand _rowSelectionChangedCommand;
+        private readonly IEventAggregator _eventAggregator;
+
 
         public ObservableCollection<Person> People
         {
@@ -31,8 +35,9 @@ namespace wpf.moduleA.ViewModels
         public ICommand SelectAllCommand { get; }
         public ICommand RowSelectionChangedCommand => _rowSelectionChangedCommand ??= new DelegateCommand<Person>(OnRowSelectionChanged);
 
-        public DataGridSelectAllViewModel()
+        public DataGridSelectAllViewModel(IEventAggregator eventAggregator)
         {
+            eventAggregator.GetEvent<MyCustomEvent>().Subscribe(OnMyCustomEvent);
             People = new ObservableCollection<Person>
             {
                 new Person { Name = "John Doe", Age = 30, Email = "john.doe@example.com" , IsSelected=false },
@@ -42,6 +47,11 @@ namespace wpf.moduleA.ViewModels
             SelectedPeople = new ObservableCollection<Person>();
 
             SelectAllCommand = new DelegateCommand(SelectAll);
+        }
+
+        public void OnMyCustomEvent(string message)
+        {
+            MessageBox.Show(message);
         }
 
         private void SelectAll()

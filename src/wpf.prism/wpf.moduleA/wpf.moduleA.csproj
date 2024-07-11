@@ -12,7 +12,4 @@
     <ProjectReference Include="..\Wpf.Prism.Core\Wpf.Prism.Core.csproj" />
     <ProjectReference Include="..\Wpf.Services\Wpf.Services.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="新文件夹\" />
-  </ItemGroup>
 </Project>
